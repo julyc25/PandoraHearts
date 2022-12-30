@@ -1,0 +1,400 @@
+* {
+    
+    box-sizing: border-box;
+    transition-duration: 700ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+body {
+    /* making sure items fit when resized */
+    height: 100vh;
+    line-height: 1.6;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+}
+
+h1 {
+    /* basic setup */
+    margin-bottom: 0vh;
+    line-height: 100%;
+    z-index: 1;
+    width: 100%;
+    
+    /* font */
+    font-size:10vh;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;
+    opacity: 90%;
+
+    /* transition */
+    transition-property: opacity, font-size;
+}
+
+
+p {
+    font-family: Inter;
+    color: rgb(0, 0, 0);
+    font-size: 3vh;
+    word-spacing: 1%;
+    text-align: center;
+
+    /* background */
+    background-color: rgba(255, 255, 255, 0.626);
+    border-radius:5px;
+    border: solid;
+    border-width: thin;
+}
+
+.container {
+    /* setting size of window */
+
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    /* CSS Smooth Scroll */
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.navigate {
+    cursor: default;
+    background: rgba(255, 255, 255, 0.7);
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    z-index: 3;
+    font-family: "Cinzel Decorative";
+    width: 100%;
+    align-items: center;
+}
+
+#logo {
+    cursor: pointer;
+    display: flex;
+    padding: 0px;
+    margin-top: 1%;
+    margin-left: 5%;
+    margin-bottom: 1%;
+    width: 20%;
+}
+
+.navigate nav {
+    margin-right: 5%;
+}
+.navigate ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+
+.navigate ul li a {
+    transition: all 0.3s ease 0s;
+    float: right;
+    width: 100%;
+    text-align: center;
+    font-size: 80%;
+}
+
+.navigate ul li a:hover {
+    cursor: pointer;
+    color: white;
+}
+
+/* animations kinda */
+button:hover {
+    background-color: white;
+ }
+
+
+
+li,a,button {
+    font-weight: 500;
+    font-size: 100%;
+    color: black;
+    text-decoration: none;
+    margin: 0% 10% 0% 0%;
+    
+}
+
+section {
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Scroll Snap */
+    scroll-snap-align: center;
+
+    height: 100% !important;
+    height: 100%;
+    background-size: 100vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    
+}
+
+
+section#home {
+    background: url(images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+}
+
+
+
+#home div{
+    margin-left: 10vh;
+    margin-right: 10vh;
+    
+}
+
+#home h1{
+    animation-duration: 900ms;
+    animation-name: changeopacityhome;
+}
+
+@keyframes changeopacityhome {
+    from {
+      opacity: 0%;
+        font-size: 10vh;
+    }
+  
+    to {
+      opacity: 100%;
+      font-size: 10.1vh;
+    }
+}
+
+
+#home p {
+    animation-delay: 1800ms;
+    animation-duration: 900ms;
+    animation-name: changeopacity;
+
+}
+
+#home p:hover {
+    opacity: 100%;
+    background-color: rgba(255, 255, 255, 0.862);
+}
+
+section#author {
+    background: url(images/bg3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+}
+
+section#author h1{
+    
+    display: block;
+    margin: 1vh;
+    transform: rotate(-10deg);
+    animation-delay: 200ms;
+    animation-duration: 900ms;
+    animation-name: changerotation;
+    
+}
+
+@keyframes changerotation {
+    from {
+        transform: rotate(-10deg);
+    }
+  
+    to {
+        transform: rotate(10deg);
+    }
+}
+
+.content{
+    margin: 0vh;
+    margin-top: 5vh;
+    padding:1vh;
+    display: flex;
+    width: 100vh;
+}
+section#author p{
+    height: 10vh;
+    font-size: 1.1vh;
+    margin: 0%vh;
+    margin-right: 2vh;
+    z-index: 1;
+    margin-left: 2vh;
+    padding: 1vh;
+
+}
+
+section#author p:hover{
+    font-size: 2.9vh;
+    height: 45vh;
+    margin-left: 1vh;
+    background-color: rgba(255, 255, 255, 0.867);
+}
+
+section#author img{
+
+    object-fit: none;
+    height: 20vh;
+
+    margin-left: 2vh;
+    margin-right: 2vh;
+    border-radius: 5px;
+    filter: brightness(20%);
+
+}
+
+section#author img:hover{
+    height: 45vh;
+    filter: brightness(100%);
+}
+
+
+
+
+section#story{
+    background: url(images/bg4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+}
+
+section#dukedoms {
+    background: url(images/bg5.jpg);
+    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+
+.dukedomlist {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+section#dukedoms h1 {
+    margin-left: 1vh;
+    margin-right: 5vh;
+    font-size: 13vh;
+}
+
+
+  section#dukedoms p{
+    font-size: 3vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    padding: 1vh;
+    animation-duration: 900ms;
+    animation-name: changeopacity;
+    
+
+  }
+
+
+  section#dukedoms p:hover{
+    animation-duration: 900ms;
+    animation-name: changeopacity;
+
+  }
+
+  .one{
+    animation-delay: 100ms;
+  }
+  .two {
+    animation-delay: 200ms;
+  }
+
+  .three {
+    animation-delay: 300ms;
+  }
+  .four {
+    animation-delay: 400ms;
+  }
+
+  @keyframes changeopacity {
+    from {
+      opacity: 0%;
+    }
+  
+    to {
+      opacity: 100%;
+    }
+  }
+
+  
+
+section#vessalius {
+    background: url(images/bg9.jpg);
+    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+section#nightray {
+    background: url(images/bg1.jpg);
+    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+section#rainsworth {
+    background: url(images/bg2.jpg);
+    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+section#baskerville {
+    background: url(images/bg7.jpg);
+    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+
+
+.wrapper {
+    margin: 2vh;
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+}
+
+.name {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.559);
+    font-size: 2vh;
+    width: 30vh;
+    height: 30vh;
+    padding: 1vh;
+    word-spacing: 1vh;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.733);
+    text-align: center;
+
+}
+
+
