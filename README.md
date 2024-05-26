@@ -1,2 +1,2 @@
-# PandoraHearts2
-https://julyc25.github.io/PandoraHearts2/
+# PandoraHearts
+This is a work in progress. I will be working on this spontaneously as my HTML/CSS practice.
