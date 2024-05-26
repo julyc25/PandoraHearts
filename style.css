@@ -108,7 +108,7 @@ p {
     color: white;
 }
 
-/* animations kinda */
+
 button:hover {
     background-color: white;
  }
@@ -117,7 +117,7 @@ button:hover {
 
 li,a,button {
     font-weight: 500;
-    font-size: 100%;
+    font-size: 2vh;
     color: black;
     text-decoration: none;
     margin: 0% 10% 0% 0%;
@@ -161,33 +161,13 @@ section#home {
 }
 
 #home h1{
-    animation-duration: 900ms;
-    animation-name: changeopacityhome;
+    animation-duration: 1800ms;
+    font-size: 10.5vw;
+    margin: 1vh;
+    animation-name: changerotation;
 }
-
-@keyframes changeopacityhome {
-    from {
-      opacity: 0%;
-        font-size: 10vh;
-    }
-  
-    to {
-      opacity: 100%;
-      font-size: 10.1vh;
-    }
-}
-
-
-#home p {
-    animation-delay: 1800ms;
-    animation-duration: 900ms;
-    animation-name: changeopacity;
-
-}
-
-#home p:hover {
-    opacity: 100%;
-    background-color: rgba(255, 255, 255, 0.862);
+#home h1:hover{
+    font-size: 11vw;
 }
 
 section#author {
@@ -209,6 +189,10 @@ section#author h1{
     
 }
 
+section#author h1:hover{
+    font-size: 11vh;
+}
+
 @keyframes changerotation {
     from {
         transform: rotate(-10deg);
@@ -227,41 +211,43 @@ section#author h1{
     width: 100vh;
 }
 section#author p{
-    height: 10vh;
+    width: 80vw;
+    height: 7vh;
     font-size: 1.1vh;
     margin: 0%vh;
     margin-right: 2vh;
     z-index: 1;
     margin-left: 2vh;
     padding: 1vh;
+    overflow: hidden;
 
 }
 
 section#author p:hover{
-    font-size: 2.9vh;
-    height: 45vh;
+    font-size: 2vh;
+    height: 21vh;
     margin-left: 1vh;
     background-color: rgba(255, 255, 255, 0.867);
 }
 
 section#author img{
 
-    object-fit: none;
+   
     height: 20vh;
-
     margin-left: 2vh;
     margin-right: 2vh;
-    border-radius: 5px;
+    border-radius: 1vh;
+    border: solid;
+    border-width: 0.5px;
+    border-color: black;
     filter: brightness(20%);
 
 }
 
 section#author img:hover{
-    height: 45vh;
+    height: 30vh;
     filter: brightness(100%);
 }
-
-
 
 
 section#story{
@@ -269,11 +255,52 @@ section#story{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    align-items: center;
+
 }
 
+section#story h1{
+    animation-duration: 1800ms;
+    animation-name: changesizestory;
+}
+@keyframes changesizestory{
+    from {
+        font-size: 10vh;
+    }
+    to{
+        font-size: 11vh;
+    }
+}
+section#story p{
+    border:none;
+    color: gray;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    width: 4.5vw;
+    height: auto;
+    overflow: hidden;
+    white-space: nowrap;
+}
+    
+section#story p:hover{
+    border: solid;
+    color: black;
+    border-width: 0.5px;
+    animation-duration: 1800ms;
+    animation-delay: 900ms;
+    animation: typing 3.5s steps(30, end);
+    width: 43vw;
+}
+
+@keyframes typing {
+    from { width: 4.5vw;
+        }
+    to { width: 43vw; 
+        }
+  }
+
+
 section#dukedoms {
-    background: url(images/bg5.jpg);
+    background: url(images/alicealyss.jpg);
     background-size: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -284,37 +311,39 @@ section#dukedoms {
 
 .dukedomlist {
     width: 100%;
-    display: flex;
-    align-items: center;
+    display: inline-flex;
 }
 section#dukedoms h1 {
-    margin-left: 1vh;
-    margin-right: 5vh;
     font-size: 13vh;
 }
 
+section#dukedoms h1:hover {
+    color: rgba(187, 187, 111, 0.815);
+}
 
-  section#dukedoms p{
+.dukedomlist p{
     font-size: 3vh;
     margin-left: 2vh;
     margin-right: 2vh;
     padding: 1vh;
+    padding-left:2.5vh;
+    padding-bottom: 1.5vh;
     animation-duration: 900ms;
     animation-name: changeopacity;
-    
+    width: 25%;
+    vertical-align: middle;
 
   }
-
-
-  section#dukedoms p:hover{
-    animation-duration: 900ms;
-    animation-name: changeopacity;
-
+ .dukedomlist p:hover{
+    background-color: rgba(187, 187, 111, 0.815);
+    color:white;
   }
 
   .one{
     animation-delay: 100ms;
   }
+
+  
   .two {
     animation-delay: 200ms;
   }
