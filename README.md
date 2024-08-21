@@ -1,3 +1,2 @@
 # PandoraHearts
-This is a work in progress w/ HTML/CSS.
-There will be no Javascript.
+Note: This is not a wiki. The purpose of this website is to practice HTML/CSS.
