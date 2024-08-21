@@ -250,18 +250,9 @@ section#author img:hover{
 }
 
 
-section#story{
-    background: url(images/bg4.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 
-}
 
-section#story h1{
-    animation-duration: 1800ms;
-    animation-name: changesizestory;
-}
+
 @keyframes changesizestory{
     from {
         font-size: 10vh;
@@ -270,29 +261,20 @@ section#story h1{
         font-size: 11vh;
     }
 }
-section#story p{
-    border:none;
-    color: gray;
-    padding-left: 0.5vw;
-    padding-right: 0.5vw;
-    width: 4.5vw;
-    height: auto;
-    overflow: hidden;
-    white-space: nowrap;
-}
-    
-section#story p:hover{
-    border: solid;
-    color: black;
-    border-width: 0.5px;
-    animation-duration: 1800ms;
-    animation-delay: 900ms;
-    animation: typing 3.5s steps(30, end);
-    width: 43vw;
+
+@keyframes changewidth{
+    from {
+        width: 100px;
+    }
+    to{
+        width: 110px;
+    }
 }
 
+    
+
 @keyframes typing {
-    from { width: 4.5vw;
+    from { width: 2vw;
         }
     to { width: 43vw; 
         }
@@ -315,7 +297,10 @@ section#dukedoms {
 }
 section#dukedoms h1 {
     font-size: 13vh;
+    animation-duration: 1800ms;
+    animation-name: changesizestory;
 }
+
 
 section#dukedoms h1:hover {
     color: rgba(187, 187, 111, 0.815);
@@ -323,7 +308,7 @@ section#dukedoms h1:hover {
 
 .dukedomlist p{
     font-size: 3vh;
-    margin-left: 2vh;
+    margin-left: 4.5vh;
     margin-right: 2vh;
     padding: 1vh;
     padding-left:2.5vh;
@@ -339,21 +324,7 @@ section#dukedoms h1:hover {
     color:white;
   }
 
-  .one{
-    animation-delay: 100ms;
-  }
-
   
-  .two {
-    animation-delay: 200ms;
-  }
-
-  .three {
-    animation-delay: 300ms;
-  }
-  .four {
-    animation-delay: 400ms;
-  }
 
   @keyframes changeopacity {
     from {
@@ -375,6 +346,16 @@ section#vessalius {
     background-position: center;
     
 }
+section#vessalius img{
+    animation-duration: 900ms;
+    animation-name: changeopacity;
+}
+section#vessalius h1{
+    animation-duration: 900ms;
+    animation-name: changeopacity;
+}
+
+
 
 section#nightray {
     background: url(images/bg1.jpg);
@@ -383,6 +364,13 @@ section#nightray {
     background-repeat: no-repeat;
     background-position: center;
     
+}
+
+
+
+section#nightray h2{
+    animation-duration: 900ms;
+    animation-name: changerotation;
 }
 
 section#rainsworth {
@@ -394,15 +382,15 @@ section#rainsworth {
     
 }
 
-section#baskerville {
-    background: url(images/bg7.jpg);
-    background-size: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    
+section#rainsworth h1{
+    animation-duration: 900ms;
+    animation-name: changeopacity;
 }
 
+section#rainsworth img{
+    animation-duration: 900ms;
+    animation-name: changewidth;
+}
 
 
 .wrapper {
@@ -426,4 +414,44 @@ section#baskerville {
 
 }
 
+section#credit {
+    background: url(images/bg8.jpg);
+    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
 
+#credit div{
+    margin-left: 10vh;
+    margin-right: 10vh;
+    
+}
+
+#credit h1{
+    animation-duration: 900ms;
+    font-size: 9vw;
+    margin: 1vh;
+    animation-name: changerotation;
+}
+#credit h1:hover{
+    font-size: 9.5vw;
+}
+
+
+.one{
+    animation-delay: 150ms;
+  }
+
+  
+  .two {
+    animation-delay: 300ms;
+  }
+
+  .three {
+    animation-delay: 450ms;
+  }
+  .four {
+    animation-delay: 600ms;
+  }
